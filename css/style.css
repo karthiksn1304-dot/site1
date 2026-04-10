@@ -61,4 +61,16 @@ footer p {
   footer p {
     font-size: 0.85rem;
   }
+  html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fluid {
+  flex: 1;
+}
 }
