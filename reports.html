@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-dark text-white text-center p-3">
+    <h2>Reports</h2>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-3 col-lg-2 sidebar bg-light p-3">
+        <h5>Navigation</h5>
+        <a href="dashboard.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="settings.html">Settings</a>
+        <a href="reports.html">Reports</a>
+        <a href="index.html">Logout</a>
+      </nav>
+
+      <!-- Content Area -->
+      <main class="col-md-9 col-lg-10 p-4">
+        <h3>Analytics Reports</h3>
+        <p>Here you can view charts and analytics data.</p>
+
+        <!-- Chart Container -->
+        <div class="card p-3">
+          <canvas id="salesChart" height="100"></canvas>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-3 mt-auto">
+    <p>&copy; 2026 Your Company. All rights reserved.</p>
+  </footer>
+
+  <script src="css/js/script.js"></script>
+
+  <!-- Chart Script -->
+  <script>
+    const ctx = document.getElementById('salesChart').getContext('2d');
+    const salesChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Monthly Sales ($)',
+          data: [12000, 15000, 18000, 14000, 20000, 22000],
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' },
+          title: { display: true, text: 'Sales Report (2026)' }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
