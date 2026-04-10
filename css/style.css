@@ -1,1 +1,64 @@
 
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fluid {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+}
+.login-card {
+  width: 350px;
+  transition: transform 0.2s ease-in-out;
+}
+.login-card:hover {
+  transform: scale(1.02);
+}
+.sidebar a {
+  display: block;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: #343a40;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.sidebar a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+footer {
+  background-color: #212529 !important;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive footer padding */
+@media (max-width: 768px) {
+  footer {
+    padding: 1rem;
+  }
+  
+  footer p {
+    font-size: 0.85rem;
+  }
+}
